@@ -1,0 +1,239 @@
+:root {
+    --orange: #FE9800;
+    --random-button-font: 18pt;
+    --main-button-font: 24pt;
+    --upper-table-font: 25pt;
+    --side-bar-width: 12%
+}
+
+@font-face {
+    font-family: 'swiss911ucbt';
+    src: url('../font/swis911ucbt.ttf');
+}
+
+@font-face {
+    font-family: 'tngmonitors';
+    src: url('../font/tngMonitors.ttf');
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    font-size: var(--random-button-font);
+    font-family: "swiss911ucbt";
+    background-color: black;
+
+}
+
+#web-space {
+
+}
+
+.flex {
+    display: inline-flex;
+    background-color: black;
+}
+
+.horizontal-flex {
+    flex-direction: row;
+    width: 99%
+}
+
+.horizontal-flex > div {
+
+}
+
+#left-bar-top {
+    margin: 0;
+    padding: 0;
+    width: var(--side-bar-width);
+}
+
+#left-bar-top .stacked-boxes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dummy-button-bottom, .dummy-button-top{
+    position: relative;
+}
+
+.stacked-boxes .dummy-button-top {
+    border-bottom-left-radius: 7.5ch;
+}
+
+.dummy-button-bottom span {
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+}
+
+.dummy-button-top span {
+    position: absolute;
+    right: 1vw;
+}
+
+#flex-top-ui {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+#flex-top-ui-information {
+    display: flex;
+    flex-direction: row;
+    bottom: 4vh;
+    right: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#top-ui-bottom-bar {
+    position: absolute;
+    bottom: 0;
+    background-color: #9B98FE;
+    width: 100%;
+    height: 15px;
+}
+
+#top-ui-information {
+    color: white;
+    padding-left: 4vw;
+}
+
+table.database-information {
+    color: white;
+    font-size: var(--upper-table-font);
+    font-family: tngmonitors;
+}
+
+table.database-information th {
+    padding: 1vw;
+}
+
+table.database-information td {
+    padding-left: 0;
+}
+
+table.database-information span {
+    float: right;
+}
+
+#top-ui-buttons {
+    right: 4vw;
+    position: absolute;
+    bottom: 0;
+}
+
+#flex-top-buttons {
+    display:flex;
+    flex-direction: row;
+}
+
+#flex-top-left-buttons, #flex-top-right-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+div.top-button {
+    background-color: var(--orange);
+    margin-top: 1vh;
+    margin-right: 1vw;
+    height: 50px;
+    width: 10vw;
+    border-radius: 2ch;
+    padding-left: 1vw;
+    padding-right: 0;
+    position: relative;
+    font-size: var(--main-button-font);
+}
+
+div.top-button span {
+    position: absolute;
+    bottom: 0;
+    right: 2vh;
+}
+
+div.bottom-half-flex{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row
+}
+
+div.bottom-left-buttons{
+    width: 12%;
+}
+
+div.navigation-stack-flex {
+    width: 100%;
+    /*position: relative;*/
+}
+
+div.nav-title {
+    background-color: var(--orange);
+    height: 12%;
+    border-top-left-radius: 7.5ch;
+    position: relative;
+
+}
+
+div.nav-title span {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+div.nav-button {
+    background-color: var(--orange);
+    margin-top: 3px;
+    position: relative;
+    height: 6vh;
+}
+
+div.nav-button span {
+
+}
+
+div.nav-filler {
+    background-color: #CC6061;
+    height: 100%;
+    margin-top: 3px;
+}
+
+div.content-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.content-bar-flex {
+    display: flex;
+    flex-direction: row;
+    height: 7px;
+    width: 100%
+}
+
+div.orange-bar {
+    background-color: var(--orange);
+    width: 45%;
+    height: 15px;
+    border-bottom-right-radius: 1ch;
+}
+
+div.tan-mid-bar {
+    background-color: #FEB880;
+    width: 2%;
+    height: 7px;
+}
+
+div.pink-end-bar {
+    background-color: #C498C4;
+    height: 15px;
+    width: 52%;
+    border-bottom-left-radius: 1ch;
+}

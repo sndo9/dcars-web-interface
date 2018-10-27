@@ -1,0 +1,84 @@
+<script src="js/moment.min.js"></script>
+<script>
+    //User interface values to be populated from api
+    let version = .1;
+    let creator = "sndo9";
+    let totalSpace = 1000;
+    let freeSpace = 400;
+
+    //Computer date is the number of years and days since the unix epoch
+    //  <Years>.<Days>
+    let daysSinceEpoch = Math.floor(new Date() /8.64e7);
+    let computerDate = `${Math.floor(daysSinceEpoch/365)}.${daysSinceEpoch%365}`;
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+<body>
+    <dev id="web-space">
+        <div class="flex horizontal-flex" id="top-bar">
+            <div id="left-bar-top">
+                <div class="stacked-boxes">
+                    <div class="dummy-button-bottom" style="background-color:#C498C4;margin-bottom:8px;height:10%;width:100%;"><span>DCARS 40274</span></div>
+                    <div class="dummy-button-top" style="background-color:#9B98FE;height:12%;width:100%;"><span>02-654598</span></div>
+                </div>
+            </div>
+            <div id="flex-top-ui">
+                <div id="flex-top-ui-information">
+                    <div id="top-ui-information">
+                        <table class="database-information">
+                            <tr><th><span>Database</span></th><th><span>Storage</th><th><span>Version</span></th></tr>
+                            <tr><td><span>1000 gb</span></td><td><span>5000 gb</td><td><span>.1</span></td></tr>
+                            <tr><td><span>400 gb</span></td><td><span>200 gb</span></td><td></td></tr>
+                            <tr><td><span>600 gb</span></td><td><span>4800 gb</span></td></tr>
+                        </table>
+                    </div>
+                    <div id="top-ui-buttons">
+                        <div id="flex-top-buttons">
+                            <div id="flex-top-left-buttons">
+                                <div class="top-button" id="button-one" onclick="console.log('one')"><span>Button one</span></div>
+                                <div class="top-button" id="button-two"><span>Button two</span></div>
+                            </div>
+                            <div id="flex-top-right-buttons">
+                                <div class="top-button" id="button-three"><span>Button three</span></div>
+                                <div class="top-button" id="button-four"><span>Button four</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="top-ui-bottom-bar"></div>
+            </div>
+        </div>
+        <div class="flex bottom-half-flex">
+            <div class="bottom-left-buttons">
+                <div class="navigation-stack-flex">
+                    <div class="nav-title"><span>Navigation</span></div>
+                    <div class="nav-button"><span>Page 1</span></div>
+                    <div class="nav-button"><span>Page 2</span></div>
+                    <div class="nav-button"><span>Page 3</span></div>
+                    <div class="nav-button"><span>Page 4</span></div>
+                    <div class="nav-button"><span>Page 5</span></div>
+                    <div class="nav-button"><span>Page 6</span></div>
+                    <div class="nav-filler"></div>
+                </div>
+            </div>
+            <div class="content-flex">
+                <div class="content-bar-flex">
+                    <div class="orange-bar"></div>
+                    <div class="tan-mid-bar"></div>
+                    <div class="pink-end-bar"></div>
+                </div>
+            </div>
+        </div>
+    </dev>
+</body>
+</html>
+
+<script>
+    document.title = `DCARS ${version}`;
+</script>
