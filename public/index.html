@@ -1,4 +1,5 @@
 <script src="js/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     //User interface values to be populated from api
     let version = .1;
@@ -40,8 +41,8 @@
                     </div>
                     <div id="top-ui-buttons">
                         <div id="flex-top-buttons">
-                            <div id="flex-top-left-buttons">
-                                <div class="top-button" id="button-one" onclick="console.log('one')"><span>Button one</span></div>
+                            <div id="flex-top-left-buttons" onclick="nav_click(event)">
+                                <div class="top-button" id="button-one"><span>Button one</span></div>
                                 <div class="top-button" id="button-two"><span>Button two</span></div>
                             </div>
                             <div id="flex-top-right-buttons">
@@ -56,8 +57,8 @@
         </div>
         <div class="flex bottom-half-flex">
             <div class="bottom-left-buttons">
-                <div class="navigation-stack-flex">
-                    <div class="nav-title"><span>Navigation</span></div>
+                <div class="navigation-stack-flex" onclick="nav_click(event)">
+                    <div class="nav-title" onclick="null"><span>Navigation</span></div>
                     <div class="nav-button"><span>Page 1</span></div>
                     <div class="nav-button"><span>Page 2</span></div>
                     <div class="nav-button"><span>Page 3</span></div>
@@ -82,4 +83,9 @@
 
 <script>
     document.title = `DCARS ${version}`;
+
+    function nav_click(evt) {
+        //console.log($(evt.target).html());
+        console.log(evt.target.innerText);
+    }
 </script>
