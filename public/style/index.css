@@ -1,9 +1,11 @@
 :root {
     --orange: #FE9800;
-    --random-button-font: 18pt;
-    --main-button-font: 24pt;
-    --upper-table-font: 25pt;
-    --side-bar-width: 12%
+    --random-button-font: 2vh;
+    --main-button-font: 2.5vh;
+    --upper-table-font: 2.5vh;
+    --side-bar-width: 12%;
+    --database-table-one: #F8FBDB;
+    --database-table-two: var(--orange);
 }
 
 @font-face {
@@ -81,15 +83,20 @@ html, body{
     flex-direction: column;
     position: relative;
     width: 100%;
+    background-color: #9B98FE;
 }
 
 #flex-top-ui-information {
     display: flex;
     flex-direction: row;
-    bottom: 4vh;
+    bottom: 0;
     right: 0;
     position: absolute;
     width: 100%;
+    background-color: black;
+    padding-bottom: 0vh;
+    height: 100%;
+    border-bottom-left-radius: 7.5ch;
 }
 
 #top-ui-bottom-bar {
@@ -126,7 +133,7 @@ table.database-information span {
 #top-ui-buttons {
     right: 4vw;
     position: absolute;
-    bottom: 0;
+    bottom: 3vh;
 }
 
 #flex-top-buttons {
@@ -143,7 +150,7 @@ div.top-button {
     background-color: var(--orange);
     margin-top: 1vh;
     margin-right: 1vw;
-    height: 50px;
+    height: 4vh;
     width: 10vw;
     border-radius: 2ch;
     padding-left: 1vw;
@@ -184,7 +191,7 @@ div.nav-title {
 
 div.nav-title span {
     bottom: 0;
-    right: 0;
+    right: 1vw;
     position: absolute;
 }
 
@@ -209,6 +216,7 @@ div.content-flex {
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: var(--orange);
 }
 
 div.content-bar-flex {
@@ -236,4 +244,27 @@ div.pink-end-bar {
     height: 15px;
     width: 52%;
     border-bottom-left-radius: 1ch;
+}
+
+div.content {
+    background-color: black;
+    border-top-left-radius: 7.5ch;
+    height: 100%;
+    width: 100%;
+}
+
+div.top-ui-curve {
+    background-color: black;
+    height: 12vw;
+    width: 100%;
+    border-bottom-left-radius: 7.5ch;
+    position: relative;
+}
+
+tr.table-orange {
+    color: var(--database-table-two);
+}
+
+tr.table-white {
+    color: var(--database-table-one);
 }
